@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2d8962ac1cfd46b6a67c5f3dd2ec8d52" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="aspnetdbModel.aspnet_Applications" Width="1.5" PointX="7.25" PointY="8.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="aspnetdbModel.aspnet_Membership" Width="1.5" PointX="6" PointY="9.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="aspnetdbModel.aspnet_Users" Width="1.5" PointX="8.25" PointY="9.5" IsExpanded="false" />
+        <AssociationConnector Association="aspnetdbModel.FK__aspnet_Me__Appli__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="aspnetdbModel.FK__aspnet_Us__Appli__0DAF0CB0" ManuallyRouted="false" />
+        <AssociationConnector Association="aspnetdbModel.FK__aspnet_Me__UserI__22AA2996" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="aspnetdbModel.Friends" Width="1.5" PointX="7.125" PointY="10.625" IsExpanded="false" />
+        <AssociationConnector Association="aspnetdbModel.Friendsaspnet_Membership" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

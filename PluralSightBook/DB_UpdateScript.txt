@@ -1,0 +1,26 @@
+-- You may need to run this to get the database set up the first time.
+
+-- Creating table 'Friends'
+CREATE TABLE [dbo].[Friends] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [EmailAddress] nvarchar(max)  NOT NULL,
+    [UserId] uniqueidentifier  NOT NULL
+);
+GO
+ALTER TABLE [dbo].[Friends]
+ADD CONSTRAINT [PK_Friends]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+-- Creating foreign key on [UserId] in table 'Friends'
+ALTER TABLE [dbo].[Friends]
+ADD CONSTRAINT [FK_Friendsaspnet_Membership]
+    FOREIGN KEY ([UserId])
+    REFERENCES [dbo].[aspnet_Membership]
+        ([UserId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_Friendsaspnet_Membership'
+CREATE INDEX [IX_FK_Friendsaspnet_Membership]
+ON [dbo].[Friends]
+    ([UserId]);
+GO
